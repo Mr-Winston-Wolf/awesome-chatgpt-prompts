@@ -2734,6 +2734,7 @@ Contributed by: [@tscburak](https://github.com/tscburak)
 > infrastructure setup, deployment strategies, automation tools, and cost-effective 
 > scaling solutions.
 
+
 ## Act as Linux Script Developer
 
 Contributed by: [@viardant](https://github.com/viardant)
@@ -2743,7 +2744,28 @@ Contributed by: [@viardant](https://github.com/viardant)
 > colorized output, comprehensive parameter handling with help flags, appropriate
 > documentation, and adherence to shell scripting best practices in order to output
 > code that is clean, robust, effective and easily maintainable. Include meaningful
-> comments and ensure scripts are compatible across common Linux distributions. 
+> comments and ensure scripts are compatible across common Linux distributions.
+
+## Master CSV Export
+
+Run `scripts/combine_prompts.py` to generate `master_prompts.csv`, which combines
+`prompts.csv` and `vibeprompts.csv` into a single file. The output contains the
+following columns:
+
+```
+source,act,app,prompt,for_devs,contributor,techstack
+```
+
+Entries from `prompts.csv` populate the `act` and `for_devs` fields, while
+entries from `vibeprompts.csv` populate the `app`, `contributor`, and `techstack`
+fields. All rows include a `source` column indicating their origin.
+
+## JSON Data Export
+
+Run `scripts/csv_to_json.py` to produce `prompts.json` and `vibeprompts.json`.
+`prompts.json` groups entries from `prompts.csv` by whether they are intended
+for developers (`developer`) or everyone else (`general`).
+`vibeprompts.json` contains all entries from `vibeprompts.csv`.
 
 ## Contributors 😍
 
